@@ -1,0 +1,36 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "create .o",
+      "type": "shell",
+      "command": "clang",
+      "args": [
+        "-std=c11",
+        "-fPIC",
+        "-c",
+        "-Igodot_headers",
+        "src/simple.c",
+        "-o",
+        "src/simple.os",
+        "-arch i386 -arch x86_64"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "create dylib",
+      "type": "shell",
+      "command": "clang",
+      "args": [
+        "-dynamiclib",
+        "/Users/zszen/Desktop/test/godot/godot_header/plugins/simple/src/simple.os",
+        "-o",
+        "/Users/zszen/Desktop/test/godot/godot_header/plugins/simple/bin/libsimple.dylib",
+        "-arch i386 -arch x86_64"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
