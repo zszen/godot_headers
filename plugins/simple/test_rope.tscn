@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/Rope/rope.gd" type="Script" id=1]
+[ext_resource path="res://addons/Rope/icon.png" type="Texture" id=2]
+[ext_resource path="res://addons/Rope/rope.tex" type="Texture" id=3]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[node name="test" type="Node2D"]
+
+[node name="Rope" type="Node2D" parent="."]
+position = Vector2( 179.068, 61.5385 )
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_icon": ExtResource( 2 )
+}
+Curve = SubResource( 1 )
+Use_Texture = true
+Rope_Texture = ExtResource( 3 )

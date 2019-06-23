@@ -8,15 +8,25 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Curve_Editor",
+"language": "GDScript",
+"path": "res://addons/Rope/curve_editor.gd"
+} ]
 _global_script_class_icons={
-
+"Curve_Editor": ""
 }
 
 [application]
 
 config/name="simple"
+run/main_scene="res://test.tscn"
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "Rope" )
 
 [rendering]
 
